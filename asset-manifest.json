@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/pro4/static/css/main.4ef45e2d.css",
-    "main.js": "/pro4/static/js/main.0658eec3.js",
-    "static/js/787.53a19792.chunk.js": "/pro4/static/js/787.53a19792.chunk.js",
-    "static/media/bag_effect2.png": "/pro4/static/media/bag_effect2.93533de85b7d9a02ceda.png",
-    "index.html": "/pro4/index.html",
-    "main.4ef45e2d.css.map": "/pro4/static/css/main.4ef45e2d.css.map",
-    "main.0658eec3.js.map": "/pro4/static/js/main.0658eec3.js.map",
-    "787.53a19792.chunk.js.map": "/pro4/static/js/787.53a19792.chunk.js.map"
+    "main.css": "/pro4_MapsMart/static/css/main.1ca7ba7c.css",
+    "main.js": "/pro4_MapsMart/static/js/main.2c0e5445.js",
+    "static/js/787.53a19792.chunk.js": "/pro4_MapsMart/static/js/787.53a19792.chunk.js",
+    "static/media/bag_effect2.png": "/pro4_MapsMart/static/media/bag_effect2.93533de85b7d9a02ceda.png",
+    "index.html": "/pro4_MapsMart/index.html",
+    "main.1ca7ba7c.css.map": "/pro4_MapsMart/static/css/main.1ca7ba7c.css.map",
+    "main.2c0e5445.js.map": "/pro4_MapsMart/static/js/main.2c0e5445.js.map",
+    "787.53a19792.chunk.js.map": "/pro4_MapsMart/static/js/787.53a19792.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ef45e2d.css",
-    "static/js/main.0658eec3.js"
+    "static/css/main.1ca7ba7c.css",
+    "static/js/main.2c0e5445.js"
   ]
 }
