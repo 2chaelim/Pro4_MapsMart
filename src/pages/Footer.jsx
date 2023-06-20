@@ -16,16 +16,16 @@ function Footer() {
         </div>
         <div className="ft-icon">
           <a href="#">
-            <i class="fa-solid fa-blog"></i>
+            <i className="fa-solid fa-blog"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-facebook"></i>
+            <i className="fa-brands fa-facebook"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-instagram"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-twitter"></i>
+            <i className="fa-brands fa-twitter"></i>
           </a>
         </div>
       </footer>

@@ -2,8 +2,14 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Map from "./Map";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem, removeItem } from "../store/cartStore";
 
 function DetailModal(props) {
+  let item = props.item;
+  // console.log(item);
+  const dispatch = useDispatch();
+
   return (
     <Modal
       {...props}
@@ -14,9 +20,9 @@ function DetailModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter" className="modal-t">
-          <p>{props.item.title}</p>
+          <p>{item.title}</p>
           <img
-            src={`${process.env.PUBLIC_URL}img/eyes.png`}
+            src={`${process.env.PUBLIC_URL}/img/eyes.png`}
             alt="eyes"
             className="eyes"
           />
@@ -24,25 +30,38 @@ function DetailModal(props) {
       </Modal.Header>
       <Modal.Body>
         <div>
-          <Map item={props.item} />
+          <Map item={item} />
         </div>
         <div className="detail-con">
           <p>
             <span>주소</span>
             <ul>
-              <li>{props.item.addr}</li>
-              <li>{props.item.dtlAddr}</li>
+              <li>{item.addr}</li>
+              <li>{item.dtlAddr}</li>
             </ul>
           </p>
           <p>
             <span>전화번호</span>
-            {props.item.tel}
+            {item.tel}
           </p>
-          <p>[{props.item.summ}]</p>
+          <p>[{item.summ}]</p>
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button className="btn-pick">담기</Button>
+        <Button
+          className="btn-pick"
+          onClick={() => {
+            dispatch(
+              addItem({
+                title: props.item.title,
+              })
+            );
+            alert(`'${props.item.title}' 담기 완료!`);
+            props.setModalShow(false);
+          }}
+        >
+          담기
+        </Button>
       </Modal.Footer>
     </Modal>
   );
@@ -64,6 +83,7 @@ function Detail({ item }) {
       <DetailModal
         item={item}
         show={modalShow}
+        setModalShow={setModalShow}
         onHide={() => setModalShow(false)}
       />
     </>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import locations from "../location";
 import Food from "./Food";
@@ -6,8 +7,9 @@ import Tour from "./Tour";
 import Shop from "./Shop";
 import Room from "./Room";
 import PlaceList from "./PlaceList";
+import Cart from "./Cart";
 
-function Select() {
+function Select({}) {
   let [selectGu, setSelectGu] = useState([]);
   let [dataF, setDataF] = useState([]);
   let [dataT, setDataT] = useState();
@@ -19,7 +21,7 @@ function Select() {
   let [selectCate, setSelectCate] = useState("1");
   let [selectItem, setSelectItem] = useState([]);
   let [locationList] = useState(locations);
-  let [cart, setCart] = useState(false);
+  let [addItems, setAddItems] = useState([]);
 
   useEffect(() => {
     const allData = localStorage.getItem("data");
@@ -28,7 +30,9 @@ function Select() {
     }
     setSelectItem(JSON.parse(allData));
   }, []);
-  console.log(selectItem);
+  // console.log(selectItem);
+
+  // console.log(addItems);
   const handleSelectGu = (e) => {
     const inputText = e.target.value.trim();
     setSelectGu(locationList[inputText]);
@@ -44,7 +48,7 @@ function Select() {
     setDataDong(filterData);
     setDataGD(1);
   };
-  console.log(selectItem);
+  // console.log(selectItem);
 
   const handleSelectDong = (e) => {
     const inputText2 = e.target.value.trim();
@@ -60,8 +64,8 @@ function Select() {
     setDataGD(1);
   };
 
-  console.log(selectGu);
-  console.log(dataDong);
+  // console.log(selectGu);
+  // console.log(dataDong);
 
   useEffect(() => {
     if (!dataGu) {
@@ -88,8 +92,8 @@ function Select() {
     setDataR(newDataR);
   }, [dataGu]);
 
-  console.log(dataGu);
-  console.log(dataF);
+  // console.log(dataGu);
+  // console.log(dataF);
 
   const handleCate = (e) => {
     setSelectCate(e.target.value);
@@ -105,7 +109,8 @@ function Select() {
   } else if (selectCate === "4") {
     selectedComponent = <Room list={dataR} />;
   }
-  console.log(selectCate);
+
+  // console.log(selectCate);
   return (
     <section className="select ">
       <div className="top-menu mw">
@@ -136,13 +141,7 @@ function Select() {
             <option value="4">숙박</option>
           </select>
         </div>
-        <button
-          onClick={() => {
-            setCart(!cart);
-          }}
-        >
-          <div>bag</div>
-        </button>
+        <Cart />
       </div>
       <div className="hot-title mw">
         <p>

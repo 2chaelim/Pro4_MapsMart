@@ -7,6 +7,7 @@ function HotCard({ item }) {
         src={`${process.env.PUBLIC_URL}/img/hotlist/${item.img}`}
         alt={item.title}
       />
+
       <p className="place-name">{item.title}</p>
       <p className="for-detail">
         <Detail item={item} />

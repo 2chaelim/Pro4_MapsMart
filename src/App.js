@@ -6,9 +6,11 @@ import Header from "./pages/Header";
 import Main from "./pages/Main";
 import Footer from "./pages/Footer";
 import Pick from "./pages/Pick";
+import View from "./pages/View";
+import CartPage from "./pages/CartPage";
 
 function App() {
-  // let urlName = useLocation().pathname;
+  let subName = useLocation().pathname;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -46,7 +48,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />}></Route>
-        <Route path="/Pick" element={<Pick />}></Route>
+        <Route path="/Pick" element={<Pick subName={subName} />}></Route>
+        <Route path="/View" element={<View subName={subName} />}></Route>
+        <Route path="/CartPage" element={<CartPage />}></Route>
       </Routes>
       <Footer />
     </div>
