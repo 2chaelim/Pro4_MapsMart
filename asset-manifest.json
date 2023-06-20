@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/pro4_MapsMart/static/css/main.1ca7ba7c.css",
-    "main.js": "/pro4_MapsMart/static/js/main.0b99458e.js",
+    "main.js": "/pro4_MapsMart/static/js/main.e5e86011.js",
     "static/js/787.53a19792.chunk.js": "/pro4_MapsMart/static/js/787.53a19792.chunk.js",
     "static/media/bag_effect2.png": "/pro4_MapsMart/static/media/bag_effect2.93533de85b7d9a02ceda.png",
     "index.html": "/pro4_MapsMart/index.html",
     "main.1ca7ba7c.css.map": "/pro4_MapsMart/static/css/main.1ca7ba7c.css.map",
-    "main.0b99458e.js.map": "/pro4_MapsMart/static/js/main.0b99458e.js.map",
+    "main.e5e86011.js.map": "/pro4_MapsMart/static/js/main.e5e86011.js.map",
     "787.53a19792.chunk.js.map": "/pro4_MapsMart/static/js/787.53a19792.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1ca7ba7c.css",
-    "static/js/main.0b99458e.js"
+    "static/js/main.e5e86011.js"
   ]
 }
