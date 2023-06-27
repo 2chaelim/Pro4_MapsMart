@@ -47,7 +47,8 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Main />}></Route>
+        <Route path="/Pro4_MapsMart" element={<Main />}></Route>
+        <Route path="*" element={<Main />} />
         <Route path="/Pick" element={<Pick subName={subName} />}></Route>
         <Route path="/View" element={<View subName={subName} />}></Route>
         <Route path="/CartPage" element={<CartPage />}></Route>
